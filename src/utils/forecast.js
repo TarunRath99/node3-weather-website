@@ -14,7 +14,8 @@ const forecast=(latitude,longitude,callback)=>
     }
     else{
         callback(undefined,body.daily.data[0].summary+"It's currently "+body.currently.temperature+
-        " degrees celsius .Chances of rain is "+body.currently.precipProbability)+"%"
+        " deg celsius .Chances of rain is "+body.currently.precipProbability+"%. Temperature High is "+body.daily.data[0].temperatureHigh+" deg celsius.Temperature low is "+
+        body.daily.data[0].temperatureLow+" deg celsius .")
     }
     })
  
